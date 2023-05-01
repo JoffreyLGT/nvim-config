@@ -22,6 +22,13 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
 
+  -- Display file tree on the side
+  use {
+        "nvim-tree/nvim-tree.lua",
+        after = "nvim-web-devicons",
+        requires = "nvim-tree/nvim-web-devicons",
+  }
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v2.x',
@@ -39,7 +46,7 @@ return require('packer').startup(function(use)
 	  -- Autocompletion
 	  {'hrsh7th/nvim-cmp'},     -- Required
 	  {'hrsh7th/cmp-nvim-lsp'}, -- Required
-	  {'L3MON4D3/LuaSnip'},     -- Required
+      {'L3MON4D3/LuaSnip'},     -- Required
   }
 }
 end)
