@@ -22,12 +22,22 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
 
+
   -- Display file tree on the side
   use {
         "nvim-tree/nvim-tree.lua",
         after = "nvim-web-devicons",
         requires = "nvim-tree/nvim-web-devicons",
   }
+
+  -- Display a better status bar
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
+  -- tmux and split windows navigation
+  use("christoomey/vim-tmux-navigator")
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
